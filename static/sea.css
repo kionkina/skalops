@@ -1,0 +1,168 @@
+<!DOCTYLE css>
+
+
+@import url(https://fonts.googleapis.com/css?family=Rye);
+
+
+{ background: #0000ff; }
+
+.banner {
+
+  left: 50%;
+
+  margin: 100px -200px;
+  width: 400px;
+  height: 60px;
+  border: #0000ff;
+  font: normal 30px/60px 'Rye';
+  text-align: center;
+  color: white;
+  background: #0000ff;
+  border-radius: 4px;
+  box-shadow: #0000ff;
+      	      	      
+}
+
+.banner::before,
+.banner::after {
+  content: '';
+
+  z-index: -1;
+  left: -70px;
+  top: 24px;
+  display: block;
+  width: 40px;
+  height: 0px;
+  border: #0000ff;
+  border-right: #0000ff;
+  border-bottom-color: #0000ff;
+  border-left-color: #0000ff;
+  transform: rotate(-5deg);
+}
+
+.banner::after {
+  left: auto;
+  right: -70px;
+  border-left: #0000ff;
+  border-right: #0000ff;
+  transform: rotate(5deg);
+}
+
+
+
+.container {
+
+  max-width: 800px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 45px;
+}
+
+.screen {
+  padding: 15px 10px;
+}
+
+.message__list {
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  position: relative;
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.message__item {
+
+  max-width: 50%;
+  clear: both;
+}
+
+.message__item--bot {
+
+
+  &:first-of-type .message {
+    border-top-left-radius: 20px;
+  }
+  
+  &:last-of-type .message {
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.message__item--user {
+  float: right;
+
+  
+  &:first-of-type .message {
+    border-top-right-radius: 20px;
+  }
+  
+  &:last-of-type .message {
+    border-bottom-right-radius: 20px;
+  }
+}
+
+.message {
+  padding: 8px 15px;
+  margin-top: 2px;
+  display: inline-block;
+  text-align: left;
+}
+
+.message--bot {
+  background-color: #eee;
+  border-radius: 3px 20px 20px 3px;
+  margin-left: 60px;
+}
+
+.message--user {
+  background-color: #0000ff;
+  color: #fff;
+  border-radius: 20px 3px 3px 20px;
+
+}
+
+.bot__image {
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  border-radius: 20px;
+}
+
+.user__image {
+  width: 50px;
+  height: 50px;
+  align:
+  bottom: 3px;
+
+  align: right;
+  border-radius: 20px;
+}
+
+.answer {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+
+.answer__button {
+  background-color: #0baaff;
+  border-radius: 20px;
+  color: #fff;
+  padding: 8px 15px;
+  margin-top: 2px;
+  display: inline-block;
+  cursor: pointer;
+}

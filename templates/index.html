@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<title>
+</title>
+<link href="static/sea.css" rel="stylesheet" type="text/css">
+
+<center>
+<h1 class="banner"> The SKALops Chat Room </h1>
+</center>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="screen">
+
+{% for i in len %}
+{% if i % 2 != 0 %}
+
+    <div class="message__list">
+      <img class="bot__image" src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg">
+      <div class="message__item message__item--bot">
+        <span class="message message--bot">{{test[i]}}</span>
+      </div>
+    </div>
+
+{% else %}
+
+    <div class="message__list">
+      <img class="user__image" src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg" align="right">
+      <div class="message__item message__item--user">
+        <span class="message message--user">{{test[i]}}</span>
+      </div>
+    </div>
+    <br>
+    <br>
+
+{% endif %}
+{% endfor %}
+
+
+
+
+</body>
+</html>

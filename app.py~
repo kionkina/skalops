@@ -1,0 +1,48 @@
+from flask import Flask, render_template, json
+import requests
+import twitter
+
+
+app = Flask(__name__)
+
+
+
+
+api = twitter.Api(consumer_key= "EDGHm3mV8Aksc0GBPAe7FZHel",
+                  consumer_secret='6tFzWh72U24Jm6VGw9mo6Ep2ql2YaEh6mFvlf5x5bZ78fpPnKo',
+                  access_token_key='936999125693984770-u1oDWQaZ4WweNqVOUvmgCG2wMnoBaie',
+                      access_token_secret='KHVRFjfc6QF9Zg8PxfLA9qujZfrdzM9unuuNzdd87vNnB')
+
+#print(api.VerifyCredentials())
+
+statuses = api.GetUserTimeline(screen_name="RealDonaldTrump",count=1000 )
+print len(statuses)
+
+def test():
+    ret = []
+    for item in statuses:
+        thingie = item.text.split(' ')
+        if not(u'\u2026' in thingie[len(thingie) - 2]):
+            ret.append(item.text)
+    return ret
+
+boop = test()
+for item in boop:
+    print boop
+    print ''
+
+'''
+
+boop = requests.get(
+print boop
+
+@app.route("/")
+def home():
+    return render_template("index.html", boop = boop)
+
+
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
+'''
