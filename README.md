@@ -1,9 +1,13 @@
-# skalops
 
-$ pip install requests
+Our project uses TensorFlow and the twitter API to predict the users' future tweets 
 
-$ pip install keras
 
-$ pip install tensorflow
+### Launch instructions
 
-$ pip install python-twitter
+`$ pip install requests`
+
+`$ pip install keras`
+
+`$ pip install tensorflow`
+
+`$ pip install python-twitter`
