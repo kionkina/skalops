@@ -1,4 +1,6 @@
 
+# Welcome to Skalops!
+
 Our project uses TensorFlow and the twitter API to predict the users' future tweets 
 
 
